@@ -44,6 +44,8 @@ Line 233 - existingClaim: "otk-website-drupal-drupal"
 
 Line 613 - existingClaim: "data-otk-website-mariadb-0"
 
-Then UPGRADE helm 
+Then UPGRADE helm (DOESNT't WORK)
 
 > helm upgrade otk-website ./drupal-14.1.2.tgz -f values.yaml
+
+BUT THIS WILL REBUILD IF NEEDED.
