@@ -40,7 +40,7 @@ Then to make the PVCs permanent....
 
 And edit values.yaml file to add Existing PVCs.
 
-Line 239 - existingClaim: "otk-website-drupal-drupal"
+Line 233 - existingClaim: "otk-website-drupal-drupal"
 
 Line 613 - existingClaim: "data-otk-website-mariadb-0"
 
