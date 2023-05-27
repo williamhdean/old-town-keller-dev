@@ -236,7 +236,7 @@ persistence:
   ## Requires persistence.existingClaim: nil|false
   ## Default: nil.
   ##
-  hostPath: ""
+  hostPath: "otk-website-drupal-drupal"
   ## @param persistence.annotations Persistent Volume Claim annotations
   ##
   annotations: {}
@@ -610,7 +610,7 @@ mariadb:
         - ReadWriteOnce
       size: 8Gi
       hostPath: ""
-      existingClaim: ""
+      existingClaim: "data-otk-website-mariadb-0"
 ## External database configuration
 ## @param externalDatabase.host Host of the existing database
 ## @param externalDatabase.port Port of the existing database

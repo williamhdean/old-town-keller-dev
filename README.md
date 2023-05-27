@@ -29,3 +29,18 @@ APP VERSION: 10.0.9** Please be patient while the chart is being deployed **
 
   echo Username: admin
   echo Password: $(kubectl get secret --namespace default otk-website-drupal -o jsonpath="{.data.drupal-password}" | base64 -d)
+
+
+
+Then to make the PVCs permanent....
+
+> kubectl patch pv pvc-500ef990-6a50-4751-9aaa-6080d6a64163 -p '{"spec":{"persistentVolumeReclaimPolicy":"Retain"}}'
+
+> kubectl patch pv pvc-ca79c437-37f7-40f4-85e4-6d1ce0027298 -p '{"spec":{"persistentVolumeReclaimPolicy":"Retain"}}'
+
+And edit values.yaml file to add Existing PVCs.
+
+Line 239 -  hostPath: "otk-website-drupal-drupal"
+
+Line 613 - existingClaim: "data-otk-website-mariadb-0"
+
