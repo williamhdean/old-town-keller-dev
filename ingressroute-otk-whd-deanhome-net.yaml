@@ -1,0 +1,21 @@
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: otk-website
+  namespace: default
+  annotations: 
+    kubernetes.io/ingress.class: traefik-external
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: Host(`otk.whd.deanhome.net`)
+      kind: Rule
+      services:
+        - name: otk-website-drupal 
+          port: 80
+      middlewares:
+        - name: default-headers
+  tls:
+    secretName: whd-deanhome-net-tls
