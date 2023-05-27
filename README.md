@@ -44,3 +44,6 @@ Line 239 -  hostPath: "otk-website-drupal-drupal"
 
 Line 613 - existingClaim: "data-otk-website-mariadb-0"
 
+Then UPGRADE helm 
+
+> helm upgrade otk-website ./drupal-14.1.2.tgz -f values.yaml
