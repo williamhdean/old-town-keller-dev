@@ -230,13 +230,13 @@ persistence:
   ## Requires persistence.enabled: true
   ## If defined, PVC must be created manually before volume will be bound
   ##
-  existingClaim: ""
+  existingClaim: "otk-website-drupal-drupal"
   ## @param persistence.hostPath If defined, the drupal-data volume will mount to the specified hostPath.
   ## Requires persistence.enabled: true
   ## Requires persistence.existingClaim: nil|false
   ## Default: nil.
   ##
-  hostPath: "otk-website-drupal-drupal"
+  hostPath: ""
   ## @param persistence.annotations Persistent Volume Claim annotations
   ##
   annotations: {}
