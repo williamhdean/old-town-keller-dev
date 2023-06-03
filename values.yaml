@@ -290,12 +290,17 @@ resources:
   ## limits:
   ##    cpu: 500m
   ##    memory: 1Gi
-  limits: {}
+  limits:
+    cpu: 500m
+    memory: 1Gi
+  
   ## Examples:
   ## requests:
   ##    cpu: 250m
   ##    memory: 256Mi
-  requests: {}
+  requests: 
+    cpu: 250m
+    memory: 256Mi
 ## Configure Pods Security Context
 ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-pod
 ## @param podSecurityContext.enabled Enable Drupal pods' Security Context
